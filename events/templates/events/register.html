@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+    <style>
+        .errorlist { color: red; list-style-type: none; padding-left: 0; }
+        form { max-width: 400px; margin: 20px auto; font-family: sans-serif; }
+        .form-group { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <form method="POST">
+        <h2>Event Registration Form</h2>
+        
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        
+        <button type="submit">Submit Registration</button>
+    </form>
+
+</body>
+</html>
